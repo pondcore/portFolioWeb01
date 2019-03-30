@@ -11,20 +11,7 @@ class Book {
 class UI {
   static displayBooks() {
     // 3. predefined books
-    //     const StoredBooks = [
-    //       {
-    //         title: 'Book One',
-    //         author: 'John Boe',
-    //         isbn: '11111111'
-    //       },
-    //       {
-    //         title: 'Book One',
-    //         author: 'John Boe',
-    //         isbn: '11111111'
-    //       }
-    //     ];
-    //     const books = StoredBooks;
-
+   
     const books = Store.getBooks();
 
     books.forEach((book) => UI.addBookToList(book));
@@ -136,7 +123,7 @@ document.querySelector('#book-form').addEventListener('submit', (e) => {
     Store.addBook(book);
 
     // 13. Show success message
-    UI.showAlert('Book Added', 'success');
+    UI.showAlert('Form Added', 'success');
 
     // 9. Clear fields
     UI.clearFields();
